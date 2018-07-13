@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: de34e1860f59f004d8b5e8b46c681afc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Instruction_Text: {instanceID: 0}
+  - Syringe_Silhouette: {fileID: 145844, guid: 828baf396993e1d42ab0a8950c0d9eec, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

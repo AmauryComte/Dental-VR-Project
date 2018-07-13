@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 1cb70b79c7950d946996394e55e0926f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BAND
+    100002: BARREL
+    100004: BARREL_ATTACHMENT
+    100006: CAP
+    100008: //RootNode
+    100010: FINGER_GRIP
+    100012: GLASS
+    100014: LIQUID
+    100016: NEEDLE
+    100018: NEEDLE_ADAPTOR
+    100020: NEEDLE_BASE
+    100022: PLUNGER
+    100024: PLUNGER_CANNON
+    100026: RUBBER_STOPPER
+    100028: SERYNGE_LUER_CAP
+    100030: THUMB_RING_HALF
+    400000: BAND
+    400002: BARREL
+    400004: BARREL_ATTACHMENT
+    400006: CAP
+    400008: //RootNode
+    400010: FINGER_GRIP
+    400012: GLASS
+    400014: LIQUID
+    400016: NEEDLE
+    400018: NEEDLE_ADAPTOR
+    400020: NEEDLE_BASE
+    400022: PLUNGER
+    400024: PLUNGER_CANNON
+    400026: RUBBER_STOPPER
+    400028: SERYNGE_LUER_CAP
+    400030: THUMB_RING_HALF
+    2100000: Cartridge_Glass_Mat
+    2100002: Cartridge_Rubber_Mat
+    2100004: Cartridge_Cap_Metal_Mat
+    2100006: Cartridge_Liquid_Mat
+    2100008: Syringe_Black_Metal_Mat
+    2100010: Syringe_Metal_Mat
+    2100012: Needle_Base_Mat
+    2100014: Needle_Hub_Mat
+    2300000: BAND
+    2300002: BARREL
+    2300004: BARREL_ATTACHMENT
+    2300006: CAP
+    2300008: FINGER_GRIP
+    2300010: GLASS
+    2300012: LIQUID
+    2300014: NEEDLE
+    2300016: NEEDLE_ADAPTOR
+    2300018: NEEDLE_BASE
+    2300020: PLUNGER
+    2300022: PLUNGER_CANNON
+    2300024: RUBBER_STOPPER
+    2300026: SERYNGE_LUER_CAP
+    2300028: THUMB_RING_HALF
+    3300000: BAND
+    3300002: BARREL
+    3300004: BARREL_ATTACHMENT
+    3300006: CAP
+    3300008: FINGER_GRIP
+    3300010: GLASS
+    3300012: LIQUID
+    3300014: NEEDLE
+    3300016: NEEDLE_ADAPTOR
+    3300018: NEEDLE_BASE
+    3300020: PLUNGER
+    3300022: PLUNGER_CANNON
+    3300024: RUBBER_STOPPER
+    3300026: SERYNGE_LUER_CAP
+    3300028: THUMB_RING_HALF
+    4300000: GLASS
+    4300002: RUBBER_STOPPER
+    4300004: BAND
+    4300006: CAP
+    4300008: LIQUID
+    4300010: FINGER_GRIP
+    4300012: BARREL
+    4300014: PLUNGER_CANNON
+    4300016: NEEDLE_ADAPTOR
+    4300018: PLUNGER
+    4300020: BARREL_ATTACHMENT
+    4300022: NEEDLE_BASE
+    4300024: THUMB_RING_HALF
+    4300026: NEEDLE
+    4300028: SERYNGE_LUER_CAP
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
