@@ -7,7 +7,7 @@ public class Forceps : MonoBehaviour {
     protected OVRInput.Controller m_controller;
     private Animator anim;
 
-	private bool isGrabbed;
+	private bool isGrabbed = false;
 	private bool isInPlace = false;
 	public GameObject syringe_Silhouette;
     public bool traceHand = true;
@@ -28,25 +28,28 @@ public class Forceps : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
 		if (other.tag.Equals ("rHand")) {
-			
+            Debug.Log(isGrabbed);
+            Debug.Log(isInPlace);
+            Debug.Log(OVRInput.Get (OVRInput.Axis1D.SecondaryHandTrigger, m_controller));
 			// On the first frame we initialize the thyringe transform parent to the rhand transform
-			if (OVRInput.Get (OVRInput.Button.PrimaryHandTrigger, m_controller) && !isGrabbed && !isInPlace) {
+			if (OVRInput.Get (OVRInput.Axis1D.SecondaryHandTrigger)>0.0f && !isGrabbed && !isInPlace) {
 				isGrabbed = true;
+                Debug.Log(isGrabbed);
 				transform.parent = other.transform;
 			}
 
 			// Then the syringe is grabbed and at Primaryindextrigger we set the anim
-			else if (isGrabbed && OVRInput.Get (OVRInput.Button.PrimaryHandTrigger, m_controller) && OVRInput.Get (OVRInput.Button.PrimaryIndexTrigger, m_controller)) {
+			else if (isGrabbed &&  OVRInput.Get (OVRInput.Axis1D.SecondaryIndexTrigger, m_controller)==1.0f) {
 					anim.SetBool ("open", false);
 			}
 
 			// Then we close the anim when release the index trigger
-			else if (!anim.GetBool("open") && !OVRInput.Get (OVRInput.Button.PrimaryIndexTrigger, m_controller)) {
+			else if (!anim.GetBool("open") && OVRInput.Get (OVRInput.Axis1D.SecondaryIndexTrigger, m_controller)==0f) {
 					anim.SetBool ("open", true);
 			}
 
 			// When we release the syringe grabb become false
-			else if (!OVRInput.Get (OVRInput.Button.PrimaryHandTrigger, m_controller) && isGrabbed && !isInPlace) {
+			else if (OVRInput.Get (OVRInput.Axis1D.SecondaryHandTrigger, m_controller)==1.0f && isGrabbed && !isInPlace) {
 				if (!anim.GetBool("open")) anim.SetBool ("open", true);
 				isGrabbed = false;
 				transform.parent = null;

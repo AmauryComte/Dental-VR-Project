@@ -7,7 +7,7 @@ TagManager:
   - teeth
   - tray
   - Syringe
-  - rhand
+  - rHand
   layers:
   - Default
   - TransparentFX
