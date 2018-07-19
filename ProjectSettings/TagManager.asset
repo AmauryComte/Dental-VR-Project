@@ -7,11 +7,15 @@ TagManager:
   - teeth
   - tray
   - Syringe
+<<<<<<< HEAD
   - rhand
   - lhand
   - TEXT1
   - TEXT2
   - TEXT3
+=======
+  - rHand
+>>>>>>> 26b6523b7b8a4136f36a686aeea65dfab04bbe8d
   layers:
   - Default
   - TransparentFX
