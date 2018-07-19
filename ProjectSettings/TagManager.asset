@@ -9,6 +9,9 @@ TagManager:
   - Syringe
   - rhand
   - lhand
+  - TEXT1
+  - TEXT2
+  - TEXT3
   layers:
   - Default
   - TransparentFX
