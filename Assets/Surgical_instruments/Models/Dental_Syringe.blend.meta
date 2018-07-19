@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 0c5946d848d8af34c8aabd640236c203
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BARREL
+    100002: BARREL_ATTACHMENT
+    100004: CAP
+    100006: //RootNode
+    100008: Dental_Syringe
+    100010: FINGER_GRIP
+    100012: GLASS
+    100014: LIQUID
+    100016: NEEDLE
+    100018: NEEDLE_ADAPTOR
+    100020: NEEDLE_BASE
+    100022: PLUNGER
+    100024: PLUNGER_CANNON
+    100026: SERYNGE_LUER_CAP
+    100028: THUMB_RING_HALF
+    400000: BARREL
+    400002: BARREL_ATTACHMENT
+    400004: CAP
+    400006: //RootNode
+    400008: Dental_Syringe
+    400010: FINGER_GRIP
+    400012: GLASS
+    400014: LIQUID
+    400016: NEEDLE
+    400018: NEEDLE_ADAPTOR
+    400020: NEEDLE_BASE
+    400022: PLUNGER
+    400024: PLUNGER_CANNON
+    400026: SERYNGE_LUER_CAP
+    400028: THUMB_RING_HALF
+    2100000: NEEDLE_BASESG
+    2100002: THUMB_RING_HALFSG
+    2100004: NEEDLESG
+    2100006: LIQUIDSG
+    2100008: SERYNGE_LUER_CAPSG
+    2300000: BARREL
+    2300002: BARREL_ATTACHMENT
+    2300004: CAP
+    2300006: Dental_Syringe
+    2300008: FINGER_GRIP
+    2300010: GLASS
+    2300012: LIQUID
+    2300014: NEEDLE
+    2300016: NEEDLE_ADAPTOR
+    2300018: NEEDLE_BASE
+    2300020: PLUNGER
+    2300022: PLUNGER_CANNON
+    2300024: SERYNGE_LUER_CAP
+    2300026: THUMB_RING_HALF
+    3300000: BARREL
+    3300002: BARREL_ATTACHMENT
+    3300004: CAP
+    3300006: Dental_Syringe
+    3300008: FINGER_GRIP
+    3300010: GLASS
+    3300012: LIQUID
+    3300014: NEEDLE
+    3300016: NEEDLE_ADAPTOR
+    3300018: NEEDLE_BASE
+    3300020: PLUNGER
+    3300022: PLUNGER_CANNON
+    3300024: SERYNGE_LUER_CAP
+    3300026: THUMB_RING_HALF
+    4300000: Dental_Syringe
+    4300002: PLUNGER_CANNON
+    4300004: THUMB_RING_HALF
+    4300006: NEEDLE
+    4300008: CAP
+    4300010: PLUNGER
+    4300012: NEEDLE_ADAPTOR
+    4300014: GLASS
+    4300016: FINGER_GRIP
+    4300018: LIQUID
+    4300020: SERYNGE_LUER_CAP
+    4300022: BARREL_ATTACHMENT
+    4300024: NEEDLE_BASE
+    4300026: BARREL
+    7400000: Default Take
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
