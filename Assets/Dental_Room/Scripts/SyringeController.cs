@@ -5,16 +5,49 @@ using UnityEngine;
 public class SyringeController : MonoBehaviour {
 
 	private Animator anim;
+	private bool isGrabbed = false;
+	private bool isInPlace = false;
+	public GameObject syringe_Silhouette;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown("e")) {
-			
+	// Called once per frame when trigger
+	private void OnTriggerStay(Collider other) {
+		
+		if (other.tag.Equals("rHand")) {
+			// On the first frame we initialize the thyringe transform parent to the rhand transform
+			if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger)>0.1f && !isGrabbed && !isInPlace) {
+				isGrabbed = true;
+				transform.parent = other.transform;
+			}
+
+			// Then the syringe is grabbed and at Primaryindextrigger we set the anim
+			else if (isGrabbed &&  OVRInput.Get (OVRInput.Axis1D.PrimaryIndexTrigger)>0.1f) {
+					anim.SetBool ("open", false);
+			}
+
+			// Then we close the anim when release the index trigger
+			else if (!anim.GetBool("open") && OVRInput.Get (OVRInput.Axis1D.PrimaryIndexTrigger)==0f) {
+					anim.SetBool ("open", true);
+			}
+
+			// When we release the syringe grabb become false
+			else if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger)==0.0f && isGrabbed && !isInPlace) {
+				if (!anim.GetBool("open")) anim.SetBool ("open", true);
+				isGrabbed = false;
+				transform.parent = null;
+			}
+
+			// if in place (near the silhouette) we fix the syringe at the silhouette place
+			else if (isInPlace){
+				transform.parent = null;
+				//transorm.position = syringe_Silhouette.transform.position;
+				transform.rotation = syringe_Silhouette.transform.rotation;
+			}
+
 		}
 	}
 }

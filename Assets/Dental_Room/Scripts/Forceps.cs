@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Forceps : MonoBehaviour {
     [SerializeField]
-    protected OVRInput.Controller m_controller;
     private Animator anim;
 
 	private bool isGrabbed = false;
@@ -20,33 +19,31 @@ public class Forceps : MonoBehaviour {
         anim = GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	}
 
 	// Called once per frame when trigger
     private void OnTriggerStay(Collider other)
     {
-		if (other.tag.Equals ("rHand")) {
+
+		if (other.tag.Equals("rHand")) {
 			// On the first frame we initialize the thyringe transform parent to the rhand transform
-			if (OVRInput.Get (OVRInput.Axis1D.SecondaryHandTrigger)>0.0f && !isGrabbed && !isInPlace) {
+			if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger)>0.1f && !isGrabbed && !isInPlace) {
 				isGrabbed = true;
-                Debug.Log(isGrabbed);
+				Debug.Log(isGrabbed);
 				transform.parent = other.transform;
 			}
 
 			// Then the syringe is grabbed and at Primaryindextrigger we set the anim
-			else if (isGrabbed &&  OVRInput.Get (OVRInput.Axis1D.PrimaryIndexTrigger, m_controller)==1.0f) {
+			else if (isGrabbed &&  OVRInput.Get (OVRInput.Axis1D.PrimaryIndexTrigger)>0.1f) {
 					anim.SetBool ("open", false);
 			}
 
 			// Then we close the anim when release the index trigger
-			else if (!anim.GetBool("open") && OVRInput.Get (OVRInput.Axis1D.PrimaryIndexTrigger, m_controller)==0f) {
+			else if (!anim.GetBool("open") && OVRInput.Get (OVRInput.Axis1D.PrimaryIndexTrigger)==0f) {
 					anim.SetBool ("open", true);
 			}
 
 			// When we release the syringe grabb become false
-			else if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, m_controller)==1.0f && isGrabbed && !isInPlace) {
+			else if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger)==0.0f && isGrabbed && !isInPlace) {
 				if (!anim.GetBool("open")) anim.SetBool ("open", true);
 				isGrabbed = false;
 				transform.parent = null;
