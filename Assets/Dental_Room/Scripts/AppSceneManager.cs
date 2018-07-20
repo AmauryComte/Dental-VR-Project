@@ -22,7 +22,6 @@ public class AppSceneManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(OVRInput.Get (OVRInput.Axis1D.SecondaryHandTrigger));
 		// First step, take the syringe
 		if (syringe.GetComponent<Forceps>().GetIsGrabbed() && step==0) {
 			Instruction_Text.text = "Now place it in the orange silhouette";

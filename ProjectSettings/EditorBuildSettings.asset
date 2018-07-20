@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/hyundo/opening.unity
     guid: 3d0a7e0f39023634abfea4a2f3799461
-  - enabled: 1
-    path: Assets/UI/Start_Scene.unity
-    guid: 3c2b025e59691d74ca00ba091d0ae629
   - enabled: 1
     path: Assets/Dental_Room/scene/dental_room.unity
     guid: ade74f250475f34419b27823b8e0ad60
