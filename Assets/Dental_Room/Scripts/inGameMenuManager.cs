@@ -20,6 +20,6 @@ public class inGameMenuManager : MonoBehaviour {
 	}
 
 	public void BackToMenu (){
-		SceneManager.LoadScene("UI/Start_Scene");
+		SceneManager.LoadScene("hyundo/opening");
 	}
 }

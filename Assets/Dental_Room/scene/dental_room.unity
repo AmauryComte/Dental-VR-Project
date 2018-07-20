@@ -2640,6 +2640,16 @@ Prefab:
       propertyPath: syringe_Silhouette
       value: 
       objectReference: {fileID: 1331138241}
+    - target: {fileID: 95650375066355276, guid: 63ab9ef27f507004ca513bb99b729da0,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e402ff433e0c34c4398d8d6201609322, type: 2}
+    - target: {fileID: 95650375066355276, guid: 63ab9ef27f507004ca513bb99b729da0,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63ab9ef27f507004ca513bb99b729da0, type: 2}
   m_IsPrefabAsset: 0
@@ -3360,6 +3370,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d1542f672bab2bf44a75164e3cff8268, type: 2}
+    - target: {fileID: 1844081347703202, guid: 63ab9ef27f507004ca513bb99b729da0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114549029814940910, guid: 63ab9ef27f507004ca513bb99b729da0, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 63ab9ef27f507004ca513bb99b729da0, type: 2}
