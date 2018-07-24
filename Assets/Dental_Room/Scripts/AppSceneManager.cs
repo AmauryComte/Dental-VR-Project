@@ -9,6 +9,10 @@ public class AppSceneManager : MonoBehaviour {
 	public GameObject syringe_Silhouette;
 	public GameObject GLASS;
 	public GameObject glass;
+	public GameObject needle;
+	public GameObject NEEDLE;
+	public GameObject NEEDLE_BASE;
+	public GameObject LUER_CAP;
 
 	private float meanDistanceX;
 	private float meanDistanceY;
@@ -21,12 +25,6 @@ public class AppSceneManager : MonoBehaviour {
 	void Start () {
 		step = 0;
 		Instruction_Text.text = "Picked up the tube and place it in the syringe";
-		Debug.Log(GLASS.transform.position.x);
-		Debug.Log(glass.transform.position.x);
-		Debug.Log(GLASS.transform.position.y);
-		Debug.Log(glass.transform.position.y);
-		Debug.Log(GLASS.transform.position.z);
-		Debug.Log(glass.transform.position.z);
 	}
 	
 	// Update is called once per frame
@@ -35,6 +33,15 @@ public class AppSceneManager : MonoBehaviour {
 			Instruction_Text.text = "Now take the needle and fix it to the syringe";
 			glass.SetActive(false);
 			GLASS.SetActive(true);
+			step++;
+		}
+
+		if(needle.GetComponent<SyringeMaker>().GetIsInPlace() && step==1) {
+			Instruction_Text.text = "Now take the syringe and place it in the orange silhouette";
+			needle.SetActive(false);
+			NEEDLE.SetActive(true);
+			NEEDLE_BASE.SetActive(true);
+			LUER_CAP.SetActive(true);
 			step++;
 		}
 
