@@ -43,12 +43,6 @@ public class SyringeController : MonoBehaviour {
 				anim.SetBool("pushing", false);
 				anim.speed = speed * OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger);
 			}
-			// if in place (near the silhouette) we fix the syringe at the silhouette place
-			else if (isInPlace){
-				transform.parent = null;
-				//transorm.position = syringe_Silhouette.transform.position;
-				transform.rotation = syringe_Silhouette.transform.rotation;
-			}
 		}
 	}
 
@@ -58,5 +52,8 @@ public class SyringeController : MonoBehaviour {
     
 	public void SetIsInPlace(bool b) {
 		isInPlace = b;
+		transform.parent = null;
+		transform.position = syringe_Silhouette.transform.position;
+		transform.rotation = syringe_Silhouette.transform.rotation;
 	}
 }
