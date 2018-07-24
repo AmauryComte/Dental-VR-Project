@@ -13,17 +13,26 @@ public class SyringeMaker : MonoBehaviour {
 	public Transform objectToPlace;
 
 	private bool isInPlace = false;
+	private bool isGrabbed = false;
 
+	void Update() {
+		if (close(objectToPlace)){
+			isInPlace = true;
+		}
+	}
 	private void OnTriggerStay(Collider other) {
 
 		if (other.tag.Equals("rHand")) {
-			if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger)>0.0f && !isInPlace) {
+			if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger)>0.0f && !isGrabbed) {
 				transform.parent = other.transform;
+				isGrabbed = true;
 			}
-		}
 
-		if (close(objectToPlace)){
-			isInPlace = true;
+			else if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger)==0.0f && isGrabbed) {
+				transform.parent = null;
+				isGrabbed = false;
+				Debug.Log(isGrabbed);
+			}
 		}
 	}
 
@@ -33,7 +42,7 @@ public class SyringeMaker : MonoBehaviour {
 		distanceZ = Mathf.Abs(transform.position.z - objTransform.position.z);
 		eulerAngleX = Mathf.Abs(transform.rotation.eulerAngles.x - objTransform.rotation.eulerAngles.x);
 		eulerAngleY = Mathf.Abs(transform.rotation.eulerAngles.y - objTransform.rotation.eulerAngles.y);
-		if (distanceX < 0.1 && distanceY < 0.1 && distanceZ < 0.1 && eulerAngleX < 10 && eulerAngleY < 10) {
+		if (distanceX < 0.002 && distanceY < 0.02 && distanceZ < 0.02 && eulerAngleX < 10 && eulerAngleY < 10) {
 			return true;
 		}
 		else return false;
