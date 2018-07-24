@@ -223,6 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4996080528836110}
+  - component: {fileID: 54654338260062604}
   - component: {fileID: 95650375066355276}
   - component: {fileID: 136796739887425692}
   - component: {fileID: 114549029814940910}
@@ -918,6 +919,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1111948437583204}
   m_Mesh: {fileID: 4300018, guid: f02a9341260c1e848bc668dc20ca18c1, type: 3}
+--- !u!54 &54654338260062604
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844081347703202}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!95 &95650375066355276
 Animator:
   serializedVersion: 3
@@ -927,7 +943,7 @@ Animator:
   m_GameObject: {fileID: 1844081347703202}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f02a9341260c1e848bc668dc20ca18c1, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e402ff433e0c34c4398d8d6201609322, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
