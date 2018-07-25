@@ -37,7 +37,7 @@ public class AppSceneManager : MonoBehaviour {
 		}
 
 		if(needle.GetComponent<SyringeMaker>().GetIsInPlace() && step==1) {
-			Instruction_Text.text = "Now take the syringe and place it in the orange silhouette";
+			Instruction_Text.text = "Then take the syringe and place it in the orange silhouette that will appear";
 			needle.SetActive(false);
 			NEEDLE.SetActive(true);
 			NEEDLE_BASE.SetActive(true);
@@ -45,14 +45,14 @@ public class AppSceneManager : MonoBehaviour {
 			step++;
 		}
 
-		// First step, take the syringe
+		// Third step, take the syringe
 		if (syringe.GetComponent<SyringeController>().GetIsGrabbed() && step==2) {
-			Instruction_Text.text = "Now place it in the orange silhouette";
+			Instruction_Text.text = "Place it in the orange silhouette";
 			syringe_Silhouette.SetActive(true);
 			step++;
 		}
 
-		// Second step, place it in the orange silhouette
+		// Fourth step, place it in the orange silhouette
 		meanDistanceX = Mathf.Abs(syringe_Silhouette.transform.position.x - syringe.transform.position.x);
 		meanDistanceY = Mathf.Abs(syringe_Silhouette.transform.position.y - syringe.transform.position.y);
 		meanDistanceZ = Mathf.Abs(syringe_Silhouette.transform.position.z - syringe.transform.position.z);
