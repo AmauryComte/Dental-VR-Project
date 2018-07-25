@@ -14,6 +14,12 @@ public class SyringeController : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 	}
+
+	void Update() {
+		if (isInPlace && isGrabbed) {
+			transform.position += new Vector3(0,0,0.01f);
+		}
+	}
 	
 	// Called once per frame when trigger
 	private void OnTriggerStay(Collider other) {
