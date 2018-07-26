@@ -5,10 +5,13 @@ using UnityEngine;
 public class SyringeController : MonoBehaviour {
 
 	private Animator anim;
+	public GameObject syringe_Silhouette;
+	public Transform anchor;
 	public float speed = 1f;
 	private bool isGrabbed = false;
 	private bool isInPlace = false;
-	public GameObject syringe_Silhouette;
+	private Vector3 inversePosition;
+
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +20,8 @@ public class SyringeController : MonoBehaviour {
 
 	void Update() {
 		if (isInPlace && isGrabbed) {
-			transform.position += new Vector3(0,0,0.01f);
+			inversePosition = transform.InverseTransformPoint(anchor.position);
+			transform.Translate(0,0,inversePosition.z * Time.deltaTime,Space.Self);
 		}
 	}
 	
