@@ -56,6 +56,12 @@ public class SyringeController : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit(Collider other) {
+		if (other.tag.Equals("rHand")) {
+			isGrabbed = false;
+		}
+	}
+
 	public bool GetIsGrabbed() {
 		return isGrabbed;
 	}
