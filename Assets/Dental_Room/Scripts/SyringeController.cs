@@ -32,13 +32,13 @@ public class SyringeController : MonoBehaviour {
 
 		if (other.tag.Equals("rHand")) {
 			// On the first frame we initialize the thyringe transform parent to the rhand transform
-			if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger)>0.1f && !isGrabbed) {
+			if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger)>0.1f && !isGrabbed) {
 				isGrabbed = true;
 				if (!isInPlace) transform.parent = other.transform;
 			}
 			
 			// if we release the syringe grabb become false
-			else if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger)==0.0f) {
+			else if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger)==0.0f) {
 				isGrabbed = false;
 				transform.parent = null;
 				anim.speed = 0;
@@ -47,13 +47,13 @@ public class SyringeController : MonoBehaviour {
 			// Then the syringe is grabbed and if button one not pressed, we activate push mode
 			else if (isGrabbed && !OVRInput.Get(OVRInput.Button.One)) {
 				anim.SetBool("pushing", true);
-				anim.speed = speed * OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger);
+				anim.speed = speed * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
 			}
 
 			// but if button one is pressed it will pull
 			else if (isGrabbed && OVRInput.Get(OVRInput.Button.One)) {
 				anim.SetBool("pushing", false);
-				anim.speed = speed * OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger);
+				anim.speed = speed * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
 			}
 		}
 	}

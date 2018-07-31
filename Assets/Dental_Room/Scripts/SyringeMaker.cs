@@ -23,12 +23,12 @@ public class SyringeMaker : MonoBehaviour {
 	private void OnTriggerStay(Collider other) {
 
 		if (other.tag.Equals("rHand")) {
-			if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger)>0.0f && !isGrabbed) {
+			if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger)>0.0f && !isGrabbed) {
 				transform.parent = other.transform;
 				isGrabbed = true;
 			}
 
-			else if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger)==0.0f && isGrabbed) {
+			else if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger)==0.0f && isGrabbed) {
 				transform.parent = null;
 				isGrabbed = false;
 				Debug.Log(isGrabbed);
