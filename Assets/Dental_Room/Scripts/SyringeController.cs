@@ -22,6 +22,8 @@ public class SyringeController : MonoBehaviour {
 		if (isInPlace && isGrabbed) {
 			inversePosition = transform.InverseTransformPoint(anchor.position);
 			transform.Translate(0,0,inversePosition.z * Time.deltaTime,Space.Self);
+			byte[] noize = { 100 };
+			OVRHaptics.Channels[1].Preempt(new OVRHapticsClip(noize, 1));
 		}
 	}
 	
