@@ -4693,7 +4693,7 @@ MonoBehaviour:
   NEEDLE: {fileID: 28711020}
   NEEDLE_BASE: {fileID: 125795416}
   LUER_CAP: {fileID: 462162156}
-  Instruction_Text: {fileID: 1661504351}
+  Instruction_Text: {fileID: 1658687374}
 --- !u!1 &1403726959
 GameObject:
   m_ObjectHideFlags: 0
