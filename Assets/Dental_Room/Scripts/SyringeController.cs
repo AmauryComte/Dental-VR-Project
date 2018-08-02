@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SyringeController : MonoBehaviour {
 
@@ -10,8 +11,11 @@ public class SyringeController : MonoBehaviour {
 	public float speed = 1f;
 	private bool isGrabbed = false;
 	private bool isInPlace = false;
+
 	private Vector3 inversePosition;
 	private float zInitLocalPosition;
+	private int noizeValue;
+	private byte noizeByte;
 
 
 	// Use this for initialization
@@ -25,8 +29,13 @@ public class SyringeController : MonoBehaviour {
 			if ((!(transform.localPosition.z < zInitLocalPosition - 0.1) && !(transform.localPosition.z > zInitLocalPosition + 0.1)) || (inversePosition.z>0 && (transform.localPosition.z < zInitLocalPosition - 0.1)) || (inversePosition.z<0 && (transform.localPosition.z > zInitLocalPosition + 0.1))) {
 				transform.Translate(0,0,inversePosition.z * Time.deltaTime,Space.Self);
 			}
-			byte[] noize = { 100 };
-			OVRHaptics.Channels[1].Preempt(new OVRHapticsClip(noize, 1));
+			if (transform.localPosition.z > zInitLocalPosition) {
+				noizeValue = (int) ((transform.localPosition.z - zInitLocalPosition) * 2000);
+				noizeByte = Convert.ToByte(noizeValue + 25);
+				byte[] noize = { noizeByte };
+				OVRHaptics.Channels[1].Preempt(new OVRHapticsClip(noize, 1));
+				Debug.Log(noizeValue);
+			}
 		}
 	}
 	
