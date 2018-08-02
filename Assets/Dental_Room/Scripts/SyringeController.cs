@@ -11,6 +11,7 @@ public class SyringeController : MonoBehaviour {
 	private bool isGrabbed = false;
 	private bool isInPlace = false;
 	private Vector3 inversePosition;
+	private float zInitLocalPosition;
 
 
 	// Use this for initialization
@@ -21,7 +22,9 @@ public class SyringeController : MonoBehaviour {
 	void Update() {
 		if (isInPlace && isGrabbed) {
 			inversePosition = transform.InverseTransformPoint(anchor.position);
-			transform.Translate(0,0,inversePosition.z * Time.deltaTime,Space.Self);
+			if ((!(transform.localPosition.z < zInitLocalPosition - 0.1) && !(transform.localPosition.z > zInitLocalPosition + 0.1)) || (inversePosition.z>0 && (transform.localPosition.z < zInitLocalPosition - 0.1)) || (inversePosition.z<0 && (transform.localPosition.z > zInitLocalPosition + 0.1))) {
+				transform.Translate(0,0,inversePosition.z * Time.deltaTime,Space.Self);
+			}
 			byte[] noize = { 100 };
 			OVRHaptics.Channels[1].Preempt(new OVRHapticsClip(noize, 1));
 		}
@@ -73,5 +76,6 @@ public class SyringeController : MonoBehaviour {
 		transform.parent = null;
 		transform.position = syringe_Silhouette.transform.position;
 		transform.rotation = syringe_Silhouette.transform.rotation;
+		zInitLocalPosition = transform.localPosition.z;
 	}
 }
