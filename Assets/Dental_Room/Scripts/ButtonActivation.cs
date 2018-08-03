@@ -13,7 +13,11 @@ public class ButtonActivation : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other) {
 		if (other.tag.Equals("rHand")) {
-			GetComponent<Button>().onClick.Invoke();
+			Invoke("onClickInvoke", 0.4f);
 		}
+	}
+
+	private void onClickInvoke() {
+		GetComponent<Button>().onClick.Invoke();
 	}
 }
