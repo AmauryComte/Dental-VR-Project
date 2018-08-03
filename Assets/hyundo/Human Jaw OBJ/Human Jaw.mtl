@@ -1,0 +1,70 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 5 5.0.5.1846 Release
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl Gum
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 1 1 1
+illum 2
+Ns 128
+map_Kd HumanJawDiffuse.jpg
+map_bump HumanJawBump.jpg
+bump HumanJawBump.jpg
+map_opacity 
+map_d 
+refl HumanJawReflection.jpg
+map_kS HumanJawSpecular.jpg
+map_kA 
+map_Ns 
+
+newmtl Tongue
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 1 1 1
+illum 2
+Ns 64
+map_Kd HumanJawDiffuse.jpg
+map_bump HumanJawBump.jpg
+bump HumanJawBump.jpg
+map_opacity 
+map_d 
+refl HumanJawReflection.jpg
+map_kS HumanJawSpecular.jpg
+map_kA 
+map_Ns 
+
+newmtl Teeth
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 1 1 1
+illum 2
+Ns 181.019
+map_Kd HumanJawDiffuse.jpg
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl HumanJawReflection.jpg
+map_kS HumanJawSpecular.jpg
+map_kA 
+map_Ns 
+
+newmtl Human_Jaw
+Ka 0.588 0.588 0.588
+Kd 0.588 0.588 0.588
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
