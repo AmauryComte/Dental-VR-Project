@@ -15,7 +15,6 @@ public class inGameMenuManager : MonoBehaviour {
 
 	//SceneManager.GetActiveScene().name
 	public void Restart () {
-		Debug.Log (SceneManager.GetActiveScene().name);
 		SceneManager.LoadScene("Dental_Room/scene/dental_room");
 	}
 
