@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class ButtonActivation : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other) {
-		if (other.tag.Equals("rHand")) {
-			GetComponent<Button>().OnSelect(null);
-		}
+		if (other.tag.Equals("rHand")) GetComponent<Button>().OnSelect(null);
+
+		if (tag.Equals("BackwardButton")) transform.GetChild(0).gameObject.SetActive(true);
 	}
 
 	private void OnTriggerExit(Collider other) {
@@ -18,6 +18,7 @@ public class ButtonActivation : MonoBehaviour {
 	}
 
 	private void onClickInvoke() {
+		if (tag.Equals("BackwardButton")) transform.GetChild(0).gameObject.SetActive(false);
 		GetComponent<Button>().onClick.Invoke();
 	}
 }
