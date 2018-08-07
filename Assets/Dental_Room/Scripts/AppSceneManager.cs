@@ -14,6 +14,7 @@ public class AppSceneManager : MonoBehaviour {
 	public GameObject NEEDLE;
 	public GameObject NEEDLE_BASE;
 	public GameObject LUER_CAP;
+	public GameObject point;
 
 	private float meanDistanceX;
 	private float meanDistanceY;
@@ -60,8 +61,12 @@ public class AppSceneManager : MonoBehaviour {
 		if (meanDistanceX<0.01 && meanDistanceY<0.01 &&  meanDistanceZ < 0.01 && step==3){
 			syringe.GetComponent<SyringeController>().SetIsInPlace(true);
 			syringe_Silhouette.SetActive(false);
-			Instruction_Text.GetComponent<TextMeshPro>().text = "Now press the index trigger to perform the anestesia";
+			Instruction_Text.GetComponent<TextMeshPro>().text = "Now drag the syringe to the red point, wich represent the position to perform the anesthesia";
 			step++;
 		}
+
+		if(point.GetComponent<Point>().GetIsTouch() && step==4) {
+			Instruction_Text.GetComponent<TextMeshPro>().text = "Finally you can press the Index trigger to anaesthetize the patient";
+		} 
 	}
 }
