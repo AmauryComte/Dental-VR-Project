@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &34122993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,6 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &392516171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2969,6 +2971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &794335424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3261,6 +3264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &863864470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3719,6 +3723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &1055174063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4528,6 +4533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &1419096967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5567,7 +5573,7 @@ GameObject:
   - component: {fileID: 1760611875}
   - component: {fileID: 1760611874}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5744,6 +5750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   avatar: {fileID: 1205862019}
+  startButton: {fileID: 34122989}
   tutorial_Text: {fileID: 1529954116}
   buttonA: {fileID: 1922932169}
   indexTrigger: {fileID: 497653972}
@@ -6476,6 +6483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &1948948260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6750,6 +6758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &1999455787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7099,6 +7108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9c52d18c511743b3159751f6a2589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_exit_trigger: 1
 --- !u!114 &2089119543
 MonoBehaviour:
   m_ObjectHideFlags: 0

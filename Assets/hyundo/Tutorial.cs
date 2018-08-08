@@ -10,6 +10,7 @@ public class Tutorial : MonoBehaviour {
 	public bool isActive = false;
 
 	public GameObject avatar;
+	public GameObject startButton;
 
 	public GameObject tutorial_Text;
 	public GameObject buttonA;
@@ -24,17 +25,20 @@ public class Tutorial : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (step == 1 && !CR_Running) {
-			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab small things, use the index trigger./n It is " ;
+			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab small things, use the index trigger. It is the one blinking on the right hand." ;
 			StartCoroutine(ToSetActive(indexTrigger));
-			if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger)>0.1f) step++;
+			if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger)>0.1f) step++;
 		}
 
 		if (step == 2) {
-			tutorial_Text.GetComponent<TextMeshPro>().text = "Try on the small tube on the plate" ;
+			startButton.SetActive(true);
+			startButton.transform.GetChild(0).GetComponent<TextMeshPro>().text = "Next";
+			tutorial_Text.GetComponent<TextMeshPro>().text = "Try to grab the small tube on the plate" ;
 			avatar.GetComponent<OvrAvatar>().ShowControllers(false);
 		}
 
 		if (step == 3 && !CR_Running) {
+			startButton.SetActive(false);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab bigger things, use the hand trigger" ;
 			StartCoroutine(ToSetActive(handTrigger));
 		}
