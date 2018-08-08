@@ -9,6 +9,8 @@ public class Tutorial : MonoBehaviour {
 	private bool CR_Running = false;
 	public bool isActive = false;
 
+	public GameObject avatar;
+
 	public GameObject tutorial_Text;
 	public GameObject buttonA;
 	public GameObject indexTrigger;
@@ -22,12 +24,17 @@ public class Tutorial : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (step == 1 && !CR_Running) {
-			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab small things, use the index trigger" ;
+			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab small things, use the index trigger./n It is " ;
 			StartCoroutine(ToSetActive(indexTrigger));
-			//if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger)>0.1f) step++;
+			if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger)>0.1f) step++;
 		}
 
-		if (step == 2 && !CR_Running) {
+		if (step == 2) {
+			tutorial_Text.GetComponent<TextMeshPro>().text = "Try on the small tube on the plate" ;
+			avatar.GetComponent<OvrAvatar>().ShowControllers(false);
+		}
+
+		if (step == 3 && !CR_Running) {
 			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab bigger things, use the hand trigger" ;
 			StartCoroutine(ToSetActive(handTrigger));
 		}
@@ -41,7 +48,7 @@ public class Tutorial : MonoBehaviour {
 		CR_Running = false;
  	}
 
-	public void SetStep(int value) {
-		step = value;
+	public void SetStep() {
+		step=1;
 	}
 }
