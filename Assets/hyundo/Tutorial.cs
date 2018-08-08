@@ -12,6 +12,7 @@ public class Tutorial : MonoBehaviour {
 	public GameObject tutorial_Text;
 	public GameObject buttonA;
 	public GameObject indexTrigger;
+	public GameObject handTrigger;
 
 	// Use this for initialization
 	void Start () {
@@ -20,9 +21,15 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (step == 0 && !CR_Running) {
+		if (step == 1 && !CR_Running) {
 			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab small things, use the index trigger" ;
 			StartCoroutine(ToSetActive(indexTrigger));
+			//if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger)>0.1f) step++;
+		}
+
+		if (step == 2 && !CR_Running) {
+			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab bigger things, use the hand trigger" ;
+			StartCoroutine(ToSetActive(handTrigger));
 		}
 	}
 
@@ -33,4 +40,8 @@ public class Tutorial : MonoBehaviour {
 		isActive = !isActive;
 		CR_Running = false;
  	}
+
+	public void SetStep(int value) {
+		step = value;
+	}
 }
