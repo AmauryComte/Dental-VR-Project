@@ -47,7 +47,7 @@ public class Tutorial : MonoBehaviour {
 
 	IEnumerator ToSetActive(GameObject obj) {
 		CR_Running = true;
-     	yield return new WaitForSeconds(0.5f);
+     	yield return new WaitForSeconds(0.4f);
 		obj.SetActive(!isActive);
 		isActive = !isActive;
 		CR_Running = false;
