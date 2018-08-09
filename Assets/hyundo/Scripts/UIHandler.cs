@@ -9,6 +9,10 @@ public class UIHandler : MonoBehaviour {
         SceneManager.LoadScene("Dental_Room/scene/dental_room");
     }
 
+    public void RemoveTeeth() {
+        SceneManager.LoadScene("hyundo/Scenes/RemoveTeeth");
+    }
+
     public void Quit () {
         Application.Quit();
     }
