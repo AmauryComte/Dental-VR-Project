@@ -14,6 +14,7 @@ public class Tutorial : MonoBehaviour {
 
 	public GameObject tutorial_Text;
 	public GameObject buttonA;
+	public GameObject buttonX;
 	public GameObject indexTrigger;
 	public GameObject handTrigger;
 
@@ -25,19 +26,26 @@ public class Tutorial : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (step == 1 && !CR_Running) {
+			tutorial_Text.GetComponent<TextMeshPro>().text = "The first command you need to learn is how to bring the clipboard to you. You can do that by pressing X on your left controller." ;
+			StartCoroutine(ToSetActive(buttonX));
+			if (OVRInput.Get(OVRInput.Button.Three)) step++;
+		}
+
+ 		if (step == 2 && !CR_Running) {
+			buttonX.SetActive(false);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab small things, use the index trigger. The one on top of the controllers." ;
 			StartCoroutine(ToSetActive(indexTrigger));
 			if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger)>0.1f) step++;
 		}
 
-		if (step == 2) {
+		if (step == 3) {
 			indexTrigger.SetActive(false);
 			nextButton.SetActive(true);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "Try to grab the small tube on the plate" ;
 			avatar.GetComponent<OvrAvatar>().ShowControllers(false);
 		}
 
-		if (step == 3 && !CR_Running) {
+		if (step == 4 && !CR_Running) {
 			nextButton.SetActive(false);
 			avatar.GetComponent<OvrAvatar>().ShowControllers(true);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab bigger things, use the hand trigger. The one on the side of the controllers." ;
