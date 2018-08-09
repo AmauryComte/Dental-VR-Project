@@ -6,11 +6,8 @@ public class TubeGrabControllerTutorial : MonoBehaviour {
 
 	private bool isGrabbed = false;
 
-	void Update() {
-		Debug.Log("HERE!!!");
-	}
-
-	void OnTriggerStay(Collider other) {
+	private void OnTriggerStay(Collider other) {
+		Debug.Log("ontriggerstay");
 
 		if (other.tag.Equals("rHand")) {
 			Debug.Log("rhand");

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class SyringeGrabControllerTutorial : MonoBehaviour {
 
@@ -17,6 +16,7 @@ public class SyringeGrabControllerTutorial : MonoBehaviour {
 	
 	// Called once per frame when trigger
 	private void OnTriggerStay(Collider other) {
+		Debug.Log("syringe trigger");
 
 		if (other.tag.Equals("rHand")) {
 			// On the first frame we initialize the thyringe transform parent to the rhand transform
