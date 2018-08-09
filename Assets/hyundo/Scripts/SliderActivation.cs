@@ -7,11 +7,12 @@ public class SliderActivation : MonoBehaviour {
     private Slider slider;
     public Transform valueMin, valueMax, value;
 
-    public Transform patientSpine;
-    private float patientSpineMin = 33f, patientSpineMax = -12f;
+    public Transform ob1;
+    public float ob1Min = 33f, ob1Max = -12f;
 
-    public Transform chairBody;
-    private float chairMin = 0f, chairMax = 37f;
+    public Transform ob2;
+    public float ob2Min = 0f, ob2Max = 37f;
+    public float ob2Y=0f;
 
 
     private void Start()
@@ -34,7 +35,7 @@ public class SliderActivation : MonoBehaviour {
     }
     public void PatientAngle()
     {
-        patientSpine.localRotation = Quaternion.Euler(slider.value * (patientSpineMax - patientSpineMin) + patientSpineMin, 0, 0);
-        chairBody.localRotation = Quaternion.Euler(slider.value * (chairMax - chairMin) + chairMin, 0, 0);
+        ob1.localRotation = Quaternion.Euler(slider.value * (ob1Max - ob1Min) + ob1Min, 0, 0);
+        ob2.localRotation = Quaternion.Euler(slider.value * (ob2Max - ob2Min) + ob2Min, ob2Y, 0);
     }
 }
