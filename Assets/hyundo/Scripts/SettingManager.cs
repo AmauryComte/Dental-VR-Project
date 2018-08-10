@@ -27,7 +27,5 @@ public class SettingManager : MonoBehaviour {
         rightIndexFingerCollider.radius = 0.01f;
         rightIndexFingerCollider.isTrigger = true;
         rightIndexFinger.tag = "rHand";
-        Debug.Log("done");
-
     }
 }

@@ -7,10 +7,8 @@ public class TubeGrabControllerTutorial : MonoBehaviour {
 	private bool isGrabbed = false;
 
 	private void OnTriggerStay(Collider other) {
-		Debug.Log("ontriggerstay");
 
 		if (other.tag.Equals("rHand")) {
-			Debug.Log("rhand");
 			if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger)>0.0f && !isGrabbed) {
 				transform.parent = other.transform;
 				isGrabbed = true;
@@ -28,5 +26,9 @@ public class TubeGrabControllerTutorial : MonoBehaviour {
 		if (other.tag.Equals("rHand")) {
 			isGrabbed = false;
 		}
+	}
+
+	public bool GetIsGrabbed(){
+		return isGrabbed;
 	}
 }
