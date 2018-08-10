@@ -11,6 +11,7 @@ public class Tutorial : MonoBehaviour {
 
 	public GameObject avatar;
 	public GameObject nextButton;
+	public GameObject startButton;
 
 	public GameObject tutorial_Text;
 	public GameObject buttonA;
@@ -27,12 +28,17 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (step == 0) {
+			tutorial_Text.GetComponent<TextMeshPro>().text = "Welcome to the tutorial !";
+			buttonX.SetActive(false);
+			startButton.SetActive(true);
+		}
+
 		if (step == 1 && !CR_Running) {
+			indexTrigger.SetActive(false);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "The first command you need to learn is how to bring the clipboard to you. You can do that by pressing X on your left controller.";
 			StartCoroutine(ToSetActive(buttonX));
-			if (OVRInput.Get(OVRInput.Button.Three)) {
-				nextButton.SetActive(true);
-			}
+			if (OVRInput.Get(OVRInput.Button.Three)) nextButton.SetActive(true);
 		}
 
  		if (step == 2 && !CR_Running) {
@@ -44,6 +50,7 @@ public class Tutorial : MonoBehaviour {
 
 		if (step == 3) {
 			indexTrigger.SetActive(false);
+			handTrigger.SetActive(false);
 			avatar.GetComponent<OvrAvatar>().ShowControllers(false);
 			tube.SetActive(true);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "Try to grab the small tube on the plate" ;
@@ -73,6 +80,7 @@ public class Tutorial : MonoBehaviour {
 		}
 
 		if (step == 7) {
+			avatar.GetComponent<OvrAvatar>().ShowControllers(true);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "Then to pull the piston back, you need to still grabbing the syringe, press the index trigger and press A at the same time.";
 			if (syringe.GetComponent<SyringeGrabControllerTutorial>().GetPull()) nextButton.SetActive(true);
 		}
@@ -96,7 +104,15 @@ public class Tutorial : MonoBehaviour {
 		CR_Running = false;
  	}
 
-	public void SetStep() {
+	public void NextStep() {
 		step++;
+	}
+
+	public void PreviousStep() {
+		step--;
+	}
+
+	public void SetStep(int value) {
+		step = value;
 	}
 }
