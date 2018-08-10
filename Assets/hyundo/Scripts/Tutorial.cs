@@ -43,6 +43,7 @@ public class Tutorial : MonoBehaviour {
 
  		if (step == 2 && !CR_Running) {
 			buttonX.SetActive(false);
+			avatar.GetComponent<OvrAvatar>().ShowControllers(true);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "To grab small things, use the index trigger. The one on top of the controllers." ;
 			StartCoroutine(ToSetActive(indexTrigger));
 			if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger)>0.1f) nextButton.SetActive(true);
@@ -92,7 +93,7 @@ public class Tutorial : MonoBehaviour {
 		}
 
 		if (step == 9) {
-			tutorial_Text.GetComponent<TextMeshPro>().text = "Well done, now you can start practicing. Press the left arrow on top of this cliboard to come back to the menu.";
+			tutorial_Text.GetComponent<TextMeshPro>().text = "Well done, now you can start practicing. Press the home button to go back to home menu.";
 		}
 	}
 
