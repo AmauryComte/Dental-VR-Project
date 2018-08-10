@@ -68,16 +68,17 @@ public class Tutorial : MonoBehaviour {
 
 		if (step == 6) {
 			avatar.GetComponent<OvrAvatar>().ShowControllers(true);
-			tutorial_Text.GetComponent<TextMeshPro>().text = "Now you have the syringe, you need to know how to use it. While grabbing it, press the index trigger to push the piston.";
-			if (syringe.GetComponent<SyringeGrabControllerTutorial>().GetPush()) step++;
+			tutorial_Text.GetComponent<TextMeshPro>().text = "Now you have the syringe, you need to know how to use it. First, while grabbing it, press the index trigger to push the piston.";
+			if (syringe.GetComponent<SyringeGrabControllerTutorial>().GetPush()) nextButton.SetActive(true);
 		}
 
 		if (step == 7) {
-			tutorial_Text.GetComponent<TextMeshPro>().text = "And to pull the piston back, you need to still grabbing the syringe, press the index trigger and press A at the same time.";
-			if (syringe.GetComponent<SyringeGrabControllerTutorial>().GetPull()) step++;
+			tutorial_Text.GetComponent<TextMeshPro>().text = "Then to pull the piston back, you need to still grabbing the syringe, press the index trigger and press A at the same time.";
+			if (syringe.GetComponent<SyringeGrabControllerTutorial>().GetPull()) nextButton.SetActive(true);
 		}
 
 		if (step == 8) {
+			avatar.GetComponent<OvrAvatar>().ShowControllers(false);
 			tutorial_Text.GetComponent<TextMeshPro>().text = "Now try this without the controllers.";
 			if (syringe.GetComponent<SyringeGrabControllerTutorial>().GetAnimDone()) nextButton.SetActive(true);
 		}
