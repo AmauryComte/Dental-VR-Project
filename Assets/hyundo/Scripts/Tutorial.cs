@@ -57,6 +57,19 @@ public class Tutorial : MonoBehaviour {
 			StartCoroutine(ToSetActive(handTrigger));
 			if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger)>0.1f) nextButton.SetActive(true);
 		}
+
+		if (step == 5) {
+			handTrigger.SetActive(false);
+			avatar.GetComponent<OvrAvatar>().ShowControllers(false);
+			syringe.SetActive(true);
+			tutorial_Text.GetComponent<TextMeshPro>().text = "Grab the syringe with the hand trigger.";
+			nextButton.SetActive(true);
+		}
+
+		if (step == 6) {
+			avatar.GetComponent<OvrAvatar>().ShowControllers(true);
+			tutorial_Text.GetComponent<TextMeshPro>().text = "Now you have the syringe, you need to know how to use it. While grabbing it press the index trigger tu push the piston. And to pull the piston you need to press A and the index trigger.";
+		}
 	}
 
 	IEnumerator ToSetActive(GameObject obj) {

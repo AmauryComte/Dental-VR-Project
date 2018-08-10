@@ -7,13 +7,13 @@ public class SettingManager : MonoBehaviour {
     bool initialized = false;
 	// Use this for initialization
 	void Start () {
-        
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (!initialized &&OVRInput.GetDown(OVRInput.Button.Three)) 
+        GameObject obj = GameObject.Find("hands:b_r_index_ignore");
+        if (!initialized && obj!=null) 
         {
             initialized = true;
             Initialize();
@@ -27,6 +27,7 @@ public class SettingManager : MonoBehaviour {
         rightIndexFingerCollider.radius = 0.01f;
         rightIndexFingerCollider.isTrigger = true;
         rightIndexFinger.tag = "rHand";
+        Debug.Log("done");
 
     }
 }
