@@ -9,6 +9,8 @@ public class SyringeGrabControllerTutorial : MonoBehaviour {
 	private bool isGrabbed = false;
 	private bool push = false;
 	private bool pull = false;
+	private float push = 0f;
+	private float pull = 0f;
 
 
 	// Use this for initialization
@@ -38,6 +40,7 @@ public class SyringeGrabControllerTutorial : MonoBehaviour {
 				anim.SetBool("pushing", true);
 				anim.speed = speed * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
 				push = true;
+				push += speed * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) * Time.deltaTime;
 			}
 
 			// but if button one is pressed it will pull
@@ -45,6 +48,7 @@ public class SyringeGrabControllerTutorial : MonoBehaviour {
 				anim.SetBool("pushing", false);
 				anim.speed = speed * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
 				pull = true;
+				pull += speed * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) * Time.deltaTime;;
 			}
 		}
 	}
@@ -61,13 +65,18 @@ public class SyringeGrabControllerTutorial : MonoBehaviour {
 
 	public bool GetPush(){
 		return push;
+		if (push>2f) return true;
+		else return false;
 	}
 
 	public bool GetPull() {
 		return pull;
+		if (pull>2f) return true;
+		else return false;
 	}
 
 	public bool GetAnimDone(){
 		return push && pull;
+		return true;
 	}
 }

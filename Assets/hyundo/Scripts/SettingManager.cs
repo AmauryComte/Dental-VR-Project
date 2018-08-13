@@ -28,6 +28,7 @@ public class SettingManager : MonoBehaviour {
         SphereCollider rightIndexFingerCollider=rightIndexFinger.AddComponent<SphereCollider>();
         rightIndexFingerCollider.radius = 0.01f;
         rightIndexFingerCollider.isTrigger = true;
+<<<<<<< HEAD
         rightIndexFinger.tag = "rHand";
 
         GameObject rightGrip = GameObject.Find("hands:b_r_grip");
@@ -38,5 +39,8 @@ public class SettingManager : MonoBehaviour {
         rightGripCollider.radius = 0.05f;
         rightGripCollider.isTrigger = true;
         rightGrip.tag = "rHandGrap";
+=======
+        rightIndexFinger.tag = "rIndex";
+>>>>>>> c79072b5c981309c9febfe9b8916b43a1ae6f3b7
     }
 }
