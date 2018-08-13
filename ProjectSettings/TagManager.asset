@@ -11,6 +11,8 @@ TagManager:
   - lhand
   - Syringe
   - BackwardButton
+  - rHandGrap
+  - ligament
   layers:
   - Default
   - TransparentFX
