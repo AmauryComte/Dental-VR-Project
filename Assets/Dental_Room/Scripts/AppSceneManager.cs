@@ -68,6 +68,7 @@ public class AppSceneManager : MonoBehaviour {
 
 		if(point.GetComponent<Point>().GetIsTouch() && step==4) {
 			Instruction_Text.GetComponent<TextMeshPro>().text = "Finally you can press the Index trigger to anaesthetize the patient";
+			syringe.GetComponent<SyringeController>().SetFinalPlace(true);
 			step++;
 		} 
 
