@@ -10,6 +10,8 @@ TagManager:
   - tray
   - rIndex
   - ligament
+  - TEXT1
+  - rHandGrap
   layers:
   - Default
   - TransparentFX

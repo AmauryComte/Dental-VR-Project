@@ -28,7 +28,6 @@ public class Forceps : MonoBehaviour {
 			// On the first frame we initialize the thyringe transform parent to the rhand transform
 			if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger)>0.1f && !isGrabbed && !isInPlace) {
 				isGrabbed = true;
-				Debug.Log(isGrabbed);
 				transform.parent = other.transform;
 			}
 
