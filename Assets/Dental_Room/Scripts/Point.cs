@@ -7,6 +7,7 @@ public class Point : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.tag.Equals("syringe")) isTouch = true;
+		Debug.Log(other.tag);
 	}
 
 	public bool GetIsTouch(){

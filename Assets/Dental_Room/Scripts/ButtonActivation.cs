@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonActivation : MonoBehaviour {
 
-	public bool can_exit_trigger = true;
+	private bool can_exit_trigger = true;
 
 	private void OnTriggerEnter(Collider other) {
 		if (other.tag.Equals("rIndex")) GetComponent<Button>().OnSelect(null);

@@ -29,10 +29,9 @@ public class SliderActivation : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals("rHand"))
+        if (other.tag.Equals("rIndex"))
         {
             value.position = other.transform.position;
-            Debug.Log(value.localPosition);
             slider.value = (value.transform.localPosition.x - valueMin.transform.localPosition.x) / (valueMax.transform.localPosition.x - valueMin.transform.localPosition.x);
 
         }

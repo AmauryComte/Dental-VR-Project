@@ -11,6 +11,7 @@ public class SyringeController : MonoBehaviour {
 	public float speed = 1f;
 	private bool isGrabbed = false;
 	private bool isInPlace = false;
+	private float animDone = 0f;
 
 	private Vector3 inversePosition;
 	private float zInitLocalPosition;
@@ -60,6 +61,8 @@ public class SyringeController : MonoBehaviour {
 			else if (isGrabbed && !OVRInput.Get(OVRInput.Button.One)) {
 				anim.SetBool("pushing", true);
 				anim.speed = speed * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
+				animDone += speed * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) / 24;
+				Debug.Log(animDone);
 			}
 
 			// but if button one is pressed it will pull
@@ -78,6 +81,11 @@ public class SyringeController : MonoBehaviour {
 
 	public bool GetIsGrabbed() {
 		return isGrabbed;
+	}
+
+	public bool GetAnimDone(){
+		if (animDone>3f*speed) return true;
+		else return false;
 	}
     
 	public void SetIsInPlace(bool b) {

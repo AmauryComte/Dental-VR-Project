@@ -12,6 +12,7 @@ TagManager:
   - ligament
   - TEXT1
   - rHandGrap
+  - syringe
   layers:
   - Default
   - TransparentFX
