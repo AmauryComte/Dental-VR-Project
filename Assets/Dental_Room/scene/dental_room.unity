@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 153320979}
   - component: {fileID: 153320978}
   - component: {fileID: 153320977}
+  - component: {fileID: 153320982}
   m_Layer: 5
   m_Name: Button_Options
   m_TagString: Untagged
@@ -533,6 +534,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 153320982}
+        m_MethodName: SyringeBehaviour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &153320980
@@ -571,6 +583,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153320975}
   m_CullTransparentMesh: 0
+--- !u!114 &153320982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 153320975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4adfef27ee3ff545b3bf81ef585ea10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syringe: {fileID: 846434316}
+  joint_2: {fileID: 1141470090}
 --- !u!1 &232282493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2907,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4921789549632692, guid: 6546bdc33c6f59343bf6578dd99e595b,
     type: 2}
   m_PrefabInternal: {fileID: 1107263158}
+--- !u!1 &1141470090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1941579107092894, guid: 3506965c1f7536c4f94f731f40ed0c4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 633006164}
 --- !u!1 &1182780903
 GameObject:
   m_ObjectHideFlags: 0
@@ -4739,8 +4769,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 1.5
+  m_fontSizeBase: 1.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5180,7 +5210,7 @@ Prefab:
     - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224195832874991310, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
         type: 2}
@@ -5343,12 +5373,12 @@ Prefab:
     - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: TeethCheck
+      value: SetPatientInPosition
       objectReference: {fileID: 0}
     - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
         type: 2}
@@ -5365,6 +5395,46 @@ Prefab:
       propertyPath: objs.Array.data[2].transform
       value: 
       objectReference: {fileID: 633006168}
+    - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1364734211}
+    - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 153320982}
+    - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SyringeBehaviourToNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114282355234806042, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1cc23cbd3a4fa847b66ea6e22e8c6b7, type: 2}
   m_IsPrefabAsset: 0

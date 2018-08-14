@@ -98,4 +98,8 @@ public class SyringeController : MonoBehaviour {
 		transform.rotation = syringe_Silhouette.transform.rotation;
 		zInitLocalPosition = transform.localPosition.z;
 	}
+
+	public bool GetIsInPlace(){
+		return isInPlace;
+	}
 }
