@@ -3586,7 +3586,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 4858923678428126}
   m_AABB:
     m_Center: {x: 0.000029027462, y: 3.5251975, z: 5.294673}
-    m_Extent: {x: 0.51165956, y: 0.20673835, z: 0.24058485}
+    m_Extent: {x: 10.51166, y: 10.206738, z: 10.240585}
   m_DirtyAABB: 0
 --- !u!137 &137570351833048666
 SkinnedMeshRenderer:
@@ -3706,7 +3706,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 4858923678428126}
   m_AABB:
     m_Center: {x: -0.00000059604645, y: 3.549662, z: 5.453933}
-    m_Extent: {x: 0.604, y: 0.20714617, z: 0.19777346}
+    m_Extent: {x: 10.604, y: 10.207147, z: 10.197774}
   m_DirtyAABB: 0
 --- !u!137 &137588769746065880
 SkinnedMeshRenderer:
