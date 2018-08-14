@@ -36,7 +36,6 @@ public class SyringeController : MonoBehaviour {
 				noizeByte = Convert.ToByte(noizeValue + 25);
 				byte[] noize = { noizeByte };
 				OVRHaptics.Channels[1].Preempt(new OVRHapticsClip(noize, 1));
-				Debug.Log(noizeValue);
 			}
 		}
 	}
