@@ -30,7 +30,7 @@ public class SliderActivation : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals("rHand"))
+        if (other.tag.Equals("rIndex"))
         {
             value.position = other.transform.position;
            

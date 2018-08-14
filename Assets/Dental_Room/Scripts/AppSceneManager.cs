@@ -31,6 +31,7 @@ public class AppSceneManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if(glass.GetComponent<SyringeMaker>().GetIsInPlace() && step==0) {
 			Instruction_Text.GetComponent<TextMeshPro>().text = "Now take the needle and fix it to the syringe";
 			glass.SetActive(false);
@@ -67,10 +68,11 @@ public class AppSceneManager : MonoBehaviour {
 
 		if(point.GetComponent<Point>().GetIsTouch() && step==4) {
 			Instruction_Text.GetComponent<TextMeshPro>().text = "Finally you can press the Index trigger to anaesthetize the patient";
+			syringe.GetComponent<SyringeController>().SetFinalPlace(true);
 			step++;
 		} 
 
-		if (step==5) {
+		if (syringe.GetComponent<SyringeController>().GetAnimDone() && step==5) {
 			Instruction_Text.GetComponent<TextMeshPro>().text = "Good Job !";
 		}
 	}
