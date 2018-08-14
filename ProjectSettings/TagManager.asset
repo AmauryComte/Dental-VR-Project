@@ -9,8 +9,8 @@ TagManager:
   - lhand
   - tray
   - rIndex
-  - rHandGrab
-  - rHandGrabFix
+  - rHandGrap
+  - rHandGrapFix
   layers:
   - Default
   - TransparentFX
