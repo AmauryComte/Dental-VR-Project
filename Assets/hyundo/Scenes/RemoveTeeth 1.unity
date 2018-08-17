@@ -3640,7 +3640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0315f4e08a5dd44afa0f5b47551222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ligamentMat: {fileID: 2100000, guid: 8d6d3619ba58b5d4e897bf4c96432349, type: 2}
+  ligamentMat: {fileID: 2100000, guid: 2ef0754ea1e6a78489b66bd6a8267950, type: 2}
 --- !u!1 &411695844
 GameObject:
   m_ObjectHideFlags: 0
@@ -8798,7 +8798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origins:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2e2aa47b5913bad45aef13fe0db7738e, type: 2}
   change:
   - {fileID: 2100000, guid: 9f064d6cf416ff84a96e30cecb6a8d01, type: 2}
   isBlink: 0
