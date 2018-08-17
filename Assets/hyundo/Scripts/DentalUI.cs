@@ -5,6 +5,7 @@ using UnityEngine;
 public class DentalUI : MonoBehaviour {
 
     public Vector3 offset=Vector3.zero;
+    private bool isGrabbed = false;
 	// Use this for initialization
 	void Start () {
         offset = new Vector3(0.08f, 0f, 0.07f);
@@ -22,16 +23,22 @@ public class DentalUI : MonoBehaviour {
         if(OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) < 0.7f && transform.parent != null)
         {
             transform.parent = null;
+            isGrabbed = false;
         }
 	}
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "lhand"&&OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger)>0.7f)
+        if (other.tag == "lhand" && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger)>0.7f)
         {
-            if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0.7f&&transform.parent!=other.transform)
+            if (transform.parent!=other.transform)
             {
                 transform.parent = other.transform;
+                isGrabbed = true;
             }
         }
+    }
+
+    public bool GetIsGrabbed(){
+        return isGrabbed;
     }
 }
